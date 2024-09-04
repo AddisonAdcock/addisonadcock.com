@@ -20,7 +20,6 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    padding: 0;
 }
 
 /* Header Section */
@@ -29,12 +28,7 @@ header {
     padding: 2rem;
     color: var(--light-color);
     text-align: center;
-    border-bottom-left-radius: 8px; 
-    border-bottom-right-radius: 8px;
-    margin-bottom: 3rem;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
 }
 
 header .headshot img {
@@ -62,6 +56,7 @@ header .social-links {
     display: flex;
     justify-content: center;
     gap: 20px;
+
 }
 
 header .social-links img {
@@ -73,51 +68,60 @@ header .social-links img:hover {
     transform: scale(1.2);
 }
 
-/* Main Content */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+/* About Section */
+.about {
+    display: flex;
+    align-items: center;
+    padding: 3rem 2rem;
+    background-color: var(--light-color);
 }
 
-.main-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.about__title {
+    font-size: 2rem;
+    color: var(--primary-color);
+    flex-basis: 30%;
+    text-align: left;
+    margin-right: 2rem;
+}
+
+.about__text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    flex-basis: 70%;
+    line-height: 1.8;
+}
+
+/* Experience Section */
+.experience {
+    padding: 3rem 2rem;
+    background-color: var(--light-color);
     margin-bottom: 3rem;
 }
 
-section {
-    background-color: var(--light-color);
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-}
-
-/* About Section */
-.about-me p {
-    font-size: 1.1rem;
-}
-
-/* Employment History */
-.employment-history .job {
-    margin-bottom: 1.5rem;
-}
-
-.employment-history h3 {
-    font-weight: 500;
+.experience__title {
+    font-size: 2rem;
     color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.employment-history p {
-    font-size: 1rem;
+.experience__item {
+    margin-bottom: 2rem;
 }
+
+.experience__item h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience__item p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+
 
 /* Footer */
 footer {
@@ -125,30 +129,6 @@ footer {
     color: var(--light-color);
     padding: 1.5rem;
     text-align: center;
-    border-top-left-radius: 8px; 
-    border-top-right-radius: 8px;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .headshot img {
-        width: 120px;
-        height: 120px;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .main-content {
-        grid-template-columns: 1fr;
-    }
-}
