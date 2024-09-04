@@ -1,3 +1,10 @@
+:root {
+    --dark-bg: #222831;
+    --medium-bg: #31363F;
+    --accent-color: #76ABAE;
+    --light-text: #EEEEEE;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,75 +13,101 @@
 
 body {
     font-family: Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
     line-height: 1.6;
-    color: #333;
 }
 
 header {
-    background-color: #222;
-    color: white;
-    padding: 1rem;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.hero {
-    background: url('hero-bg.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-.btn-primary {
-    padding: 1rem 2rem;
-    background-color: #f04e31;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.about, .resume, .projects, .contact {
+    background-color: var(--medium-bg);
     padding: 2rem;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.headshot img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.header-info {
     text-align: center;
 }
 
-.project-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.header-info h1 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
 }
 
-.project-card {
-    background-color: #f4f4f4;
+.header-info p {
+    font-size: 1.2rem;
+    color: var(--light-text);
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none; /* Remove underline */
+}
+
+.social-links img {
+    width: 30px;
+    filter: brightness(0) invert(1); /* Ensures icons are white */
+}
+
+footer {
+    background-color: var(--medium-bg);
+    text-align: center;
     padding: 1rem;
-    margin: 1rem;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
 }
 
-.contact input, .contact textarea {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    margin: 1rem 0;
+footer p {
+    color: var(--light-text);
+    font-size: 0.9rem;
 }
 
-.contact button {
-    background-color: #f04e31;
-    color: white;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .headshot img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+    }
+
+    .header-info h1 {
+        font-size: 2rem;
+    }
+
+    .header-info p {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        margin: 0 8px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
 }
