@@ -315,7 +315,6 @@ header .social-links img:hover {
     }
 }
 
-
 /* Footer */
 footer {
     background-color: var(--primary-color);
@@ -324,4 +323,88 @@ footer {
     text-align: center;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 1rem;
+    }
+
+    header .headshot img {
+        width: 100px;
+        height: 100px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 3rem 1rem;
+    }
+
+    .about__title {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .about__text {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .coursework__columns {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .coursework__column {
+        flex-basis: 100%;
+    }
+
+    .coursework__columns::before {
+        display: none;
+    }
+
+    .skills__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .projects__grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    header {
+        padding: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1.1rem;
+    }
+
+    .about__title, .experience__title, .skills__title, .projects__title {
+        font-size: 1.8rem;
+    }
+
+    .coursework__column h3, .skills__heading, .experience__item h3 {
+        font-size: 1.3rem;
+    }
+}
+
 
